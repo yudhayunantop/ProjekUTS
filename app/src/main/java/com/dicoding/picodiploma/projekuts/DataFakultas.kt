@@ -1,7 +1,9 @@
-package com.dicoding.picodiploma.projekuts
+import com.dicoding.picodiploma.projekuts.R
+import com.dicoding.picodiploma.projekuts.fakultas
+
 
 object DataFakultas {
-        private val fakultasNames = arrayOf("FAKULTAS ARSITEKTUR DAN DESAIN",
+    private val fakultasNames = arrayOf("FAKULTAS ARSITEKTUR DAN DESAIN",
             "FAKULTAS EKONOMI DAN BISNIS",
             "FAKULTAS ILMU KOMPUTER",
             "FAKULTAS PERTANIAN",
