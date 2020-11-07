@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">ProjekUTS</string>
     <string name="fakultas_name">Nama Fakultas</string>
-    <string name="detail_fakultas">Detail Fakultas</string>
+    <string name="detail_fakultas">Detail fakultas</string>
     <string name="profil_fakultas_upn">PROFIL FAKULTAS UPN</string>
+    <string name="email_fakultas">email fakultas</string>
+    <string name="link_fakultas">link fakultas</string>
+    <string name="email">E-mail Fakultas:</string>
+    <string name="website">Website fakultas:</string>
 </resources>

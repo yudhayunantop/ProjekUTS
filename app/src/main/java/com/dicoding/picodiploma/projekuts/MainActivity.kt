@@ -1,11 +1,10 @@
 package com.dicoding.picodiploma.projekuts
 
+import DataFakultas
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -56,6 +55,8 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra(DetailActivity.NAMA, fakultas.name)
         intent.putExtra(DetailActivity.DETAIL, fakultas.detail)
         intent.putExtra(DetailActivity.PHOTO, fakultas.photo)
+        intent.putExtra(DetailActivity.EMAIL, fakultas.email)
+        intent.putExtra(DetailActivity.WEB, fakultas.web)
         //startActivity(intent)
     }
 }
