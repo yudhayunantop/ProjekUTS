@@ -95,17 +95,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/website" />
 
-        <TextView
-            android:id="@+id/websiteJurusan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="9dp"
-            android:text="@string/websiteJurusan"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_web" />
-
         <LinearLayout
             android:id="@+id/linkJurusan"
             android:layout_width="0dp"
@@ -114,6 +103,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.526"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/websiteJurusan"></LinearLayout>
+            app:layout_constraintTop_toBottomOf="@+id/websiteJurusan">
+
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

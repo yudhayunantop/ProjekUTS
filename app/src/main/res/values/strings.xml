@@ -6,7 +6,6 @@
     <string name="email_fakultas">email fakultas</string>
     <string name="link_fakultas">link fakultas</string>
     <string name="email">E-mail:</string>
-    <string name="website">Website Fakultas:</string>
+    <string name="website">Website :</string>
     <string name="link_jurusan"></string>
-    <string name="websiteJurusan">Website Jurusan :</string>
 </resources>
