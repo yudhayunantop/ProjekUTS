@@ -3,8 +3,9 @@ package com.dicoding.picodiploma.projekuts
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.view.View
+import android.util.TypedValue
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_detail.*
@@ -16,6 +17,7 @@ class DetailActivity : AppCompatActivity() {
         const val PHOTO = "extra_photo"
         const val WEB = "extra_web"
         const val EMAIL = "extra_email"
+        const val LINKJURUSAN = "extra_linkjurusan"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,10 +36,6 @@ class DetailActivity : AppCompatActivity() {
         val tvDataDetail: TextView = findViewById(R.id.tv_item_detail)
         val tvEmail: TextView = findViewById(R.id.tv_email)
         val tvWeb: TextView = findViewById(R.id.tv_web)
-
-        val wadahEmail: TextView = findViewById(R.id.email)
-        val wadahLink: TextView = findViewById(R.id.website)
-
 
         val name = intent.getStringExtra(NAMA)
         val text1 = "$name"
@@ -58,11 +56,24 @@ class DetailActivity : AppCompatActivity() {
         val photo = intent.getIntExtra(PHOTO, 0)
         ivPhoto.setImageResource(photo)
 
-        if (web == "null" && email == "null") {
-            wadahEmail.visibility = View.GONE
-            wadahLink.visibility = View.GONE
-            tvEmail.visibility = View.GONE
-            tvWeb.visibility = View.GONE
+        val linkJurusan = intent.getStringArrayExtra(LINKJURUSAN)
+        var container = findViewById<LinearLayout>(R.id.linkJurusan)
+        for (i in 0 until linkJurusan!!.size) {
+            val txt = TextView(this)
+            txt.text = linkJurusan[i]
+
+//            android:layout_width="0dp"
+//            android:layout_height="wrap_content"
+
+            txt.setTextColor(tvWeb.currentTextColor)
+            txt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
+            txt.setPadding(64, 0, 0, 0)
+
+
+            container.addView(txt)
+            txt.setOnClickListener {
+                clickWeb(linkJurusan[i])
+            }
         }
 
         tv_email.setOnClickListener {

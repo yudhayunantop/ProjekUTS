@@ -15,7 +15,8 @@ class websiteFakultass : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web_view)
 
-        supportActionBar?.hide()
+        supportActionBar?.title = intent.getStringExtra(ACTION_VIEW)
+        //supportActionBar?.hide()
 
         loading.max = 100
         settings()

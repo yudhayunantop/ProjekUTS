@@ -57,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra(DetailActivity.PHOTO, fakultas.photo)
         intent.putExtra(DetailActivity.EMAIL, fakultas.email)
         intent.putExtra(DetailActivity.WEB, fakultas.web)
+        intent.putExtra(DetailActivity.LINKJURUSAN, fakultas.linkJurusan)
         //startActivity(intent)
     }
 }

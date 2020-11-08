@@ -38,13 +38,14 @@ class ListFakultasAdapter (val listfakultas: ArrayList<fakultas>) : RecyclerView
             override fun onClick(view: View) {
                 onItemClickCallback.onItemClicked(listfakultas[holder.adapterPosition])
                 val detailhalaman =
-                    Intent(view.context.applicationContext, DetailActivity::class.java)
+                        Intent(view.context.applicationContext, DetailActivity::class.java)
 
                 detailhalaman.putExtra(DetailActivity.NAMA, fakultas.name)
                 detailhalaman.putExtra(DetailActivity.DETAIL, fakultas.detail)
                 detailhalaman.putExtra(DetailActivity.PHOTO, fakultas.photo)
                 detailhalaman.putExtra(DetailActivity.EMAIL, fakultas.email)
                 detailhalaman.putExtra(DetailActivity.WEB, fakultas.web)
+                detailhalaman.putExtra(DetailActivity.LINKJURUSAN, fakultas.linkJurusan)
                 view.context.startActivity(detailhalaman)
             }
         })

@@ -4,36 +4,47 @@ import com.dicoding.picodiploma.projekuts.fakultas
 
 object DataFakultas {
     private val fakultasNames = arrayOf(
-        "FAKULTAS ARSITEKTUR DAN DESAIN",
-        "FAKULTAS EKONOMI DAN BISNIS",
-        "FAKULTAS ILMU KOMPUTER",
-        "FAKULTAS PERTANIAN",
-        "FAKULTAS HUKUM",
-        "FAKULTAS ILMU SOSIAL DAN ILMU POLITIK",
-        "FAKULTAS TEKNIK",
-        "PROFIL SAYA"
+            "FAKULTAS ARSITEKTUR DAN DESAIN",
+            "FAKULTAS EKONOMI DAN BISNIS",
+            "FAKULTAS ILMU KOMPUTER",
+            "FAKULTAS PERTANIAN",
+            "FAKULTAS HUKUM",
+            "FAKULTAS ILMU SOSIAL DAN ILMU POLITIK",
+            "FAKULTAS TEKNIK",
+            "PROFIL SAYA"
     )
 
     private val fakultasWeb = arrayOf(
-        "http://fad.upnjatim.ac.id/",
-        "http://febis.upnjatim.ac.id/",
-        "https://fik.upnjatim.ac.id/",
-        "http://faperta.upnjatim.ac.id/",
-        "http://fhukum.upnjatim.ac.id/",
-        "http://fisip.upnjatim.ac.id/",
-        "http://ft.upnjatim.ac.id/",
-        "null"
+            "http://fad.upnjatim.ac.id/",
+            "http://febis.upnjatim.ac.id/",
+            "https://fik.upnjatim.ac.id/",
+            "http://faperta.upnjatim.ac.id/",
+            "http://fhukum.upnjatim.ac.id/",
+            "http://fisip.upnjatim.ac.id/",
+            "http://ft.upnjatim.ac.id/",
+            "https://github.com/yudhayunantop"
+    )
+
+    val jurusanWeb = arrayOf(
+            arrayOf("http://dkv.upnjatim.ac.id/", "http://arsitektur.upnjatim.ac.id/"),
+            arrayOf("http://ekbang.upnjatim.ac.id/", "http://akuntansi.upnjatim.ac.id/", "http://manajemen.upnjatim.ac.id/"),
+            arrayOf("http://if.upnjatim.ac.id/", "http://sisfo.upnjatim.ac.id/", "https://fik.upnjatim.ac.id/"),
+            arrayOf("http://agrotek.upnjatim.ac.id/", "http://agribis.upnjatim.ac.id/"),
+            arrayOf("http://fhukum.upnjatim.ac.id/"),
+            arrayOf("https://adneg.upnjatim.ac.id/", "https://adbis.upnjatim.ac.id/", "http://hubint.upnjatim.ac.id/", "http://ilkom.upnjatim.ac.id/"),
+            arrayOf("http://tekkimia.upnjatim.ac.id/", "http://tekindustri.upnjatim.ac.id/", "http://teksipil.upnjatim.ac.id/", "http://teklingk.upnjatim.ac.id/", "http://tekpang.upnjatim.ac.id/", "https://ft.upnjatim.ac.id/"),
+            arrayOf("https://github.com/yudhayunantop")
     )
 
     private val fakultasEmail = arrayOf(
-        "tu.fad@upnjatim.ac.id",
-        "tu.febis@upnjatim.ac.id",
-        "tu.fik@upnjatim.ac.id",
-        "tu.faperta@upnjatim.ac.id",
-        "tu.fhukum@upnjatim.ac.id",
-        "tu.fisip@upnjatim.ac.id",
-        "tu.ft@upnjatim.ac.id",
-        "null"
+            "fad@upnjatim.ac.id",
+            "feb@upnjatim.ac.id",
+            "fik@upnjatim.ac.id",
+            "faperta@upnjatim.ac.id",
+            "fhukum@upnjatim.ac.id",
+            "fisip@upnjatim.ac.id",
+            "ft@upnjatim.ac.id",
+            "yudha.yunanto.2010@gmail.com"
     )
 
     private val fakultasDetails = arrayOf(
@@ -55,8 +66,6 @@ object DataFakultas {
                     "TTL            : Surabaya, 30 Mei 2000\n" +
                     "Alamat         : Jl. Wonorejo Rungkut 1/5\n" +
                     "No. HP         : 082135888551\n" +
-                    "E-mail         : yudha.yunanto.2010@gmail.com\n" +
-                    "Github         : https://github.com/yudhayunantop\n" +
                     "\n Riwayat Pendidikan : \n 1. SDN Wonorejo 274 \n 2. SMPN 12 Surabaya \n 3. SMAM 2 Surabaya"
     )
 
@@ -75,14 +84,23 @@ object DataFakultas {
             get() {
                 val list = arrayListOf<fakultas>()
                 for (position in fakultasNames.indices) {
-                    val fakultas = fakultas()
-                    fakultas.name = fakultasNames[position]
-                    fakultas.detail = fakultasDetails[position]
-                    fakultas.photo = fakultasImages[position]
-                    fakultas.web = fakultasWeb[position]
-                    fakultas.email = fakultasEmail[position]
+                    val fakultas = fakultas(
+                            fakultasNames[position],
+                            fakultasDetails[position],
+                            fakultasImages[position],
+                            fakultasWeb[position],
+                            fakultasEmail[position],
+                            jurusanWeb[position]
+                    )
+//                    fakultas.name = fakultasNames[position]
+//                    fakultas.detail = fakultasDetails[position]
+//                    fakultas.photo = fakultasImages[position]
+//                    fakultas.web = fakultasWeb[position]
+//                    fakultas.email = fakultasEmail[position]
+//                    fakultas.linkJurusan = jurusanWeb[position]
                     list.add(fakultas)
                 }
                 return list
             }
+
 }
