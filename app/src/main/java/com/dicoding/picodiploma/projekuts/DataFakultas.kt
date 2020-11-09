@@ -33,7 +33,7 @@ object DataFakultas {
             arrayOf("http://fhukum.upnjatim.ac.id/"),
             arrayOf("https://adneg.upnjatim.ac.id/", "https://adbis.upnjatim.ac.id/", "http://hubint.upnjatim.ac.id/", "http://ilkom.upnjatim.ac.id/"),
             arrayOf("http://tekkimia.upnjatim.ac.id/", "http://tekindustri.upnjatim.ac.id/", "http://teksipil.upnjatim.ac.id/", "http://teklingk.upnjatim.ac.id/", "http://tekpang.upnjatim.ac.id/", "https://ft.upnjatim.ac.id/"),
-            arrayOf("https://github.com/yudhayunantop")
+            arrayOf("https://www.linkedin.com/in/yudha-yunanto-putra-7ab124198/")
     )
 
     private val fakultasEmail = arrayOf(
@@ -92,12 +92,6 @@ object DataFakultas {
                             fakultasEmail[position],
                             jurusanWeb[position]
                     )
-//                    fakultas.name = fakultasNames[position]
-//                    fakultas.detail = fakultasDetails[position]
-//                    fakultas.photo = fakultasImages[position]
-//                    fakultas.web = fakultasWeb[position]
-//                    fakultas.email = fakultasEmail[position]
-//                    fakultas.linkJurusan = jurusanWeb[position]
                     list.add(fakultas)
                 }
                 return list
