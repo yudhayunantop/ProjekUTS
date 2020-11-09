@@ -28,7 +28,7 @@ object DataFakultas {
     val jurusanWeb = arrayOf(
             arrayOf("http://dkv.upnjatim.ac.id/", "http://arsitektur.upnjatim.ac.id/"),
             arrayOf("http://ekbang.upnjatim.ac.id/", "http://akuntansi.upnjatim.ac.id/", "http://manajemen.upnjatim.ac.id/"),
-            arrayOf("http://if.upnjatim.ac.id/", "http://sisfo.upnjatim.ac.id/", "https://fik.upnjatim.ac.id/"),
+            arrayOf("http://if.upnjatim.ac.id/", "http://sisfo.upnjatim.ac.id/"),
             arrayOf("http://agrotek.upnjatim.ac.id/", "http://agribis.upnjatim.ac.id/"),
             arrayOf("http://fhukum.upnjatim.ac.id/"),
             arrayOf("https://adneg.upnjatim.ac.id/", "https://adbis.upnjatim.ac.id/", "http://hubint.upnjatim.ac.id/", "http://ilkom.upnjatim.ac.id/"),
